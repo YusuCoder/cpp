@@ -6,7 +6,7 @@
 /*   By: ryusupov <ryusupov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/28 21:51:16 by rustam            #+#    #+#             */
-/*   Updated: 2024/11/29 12:17:21 by ryusupov         ###   ########.fr       */
+/*   Updated: 2024/11/29 13:34:06 by ryusupov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ Cat::Cat() {
 
 Cat::~Cat() {
     std::cout << "Destructor for cat class has been called!" << std::endl;
+    delete this->brainCat;
 }
 
 Cat::Cat(Cat const &s) : Animal() {
@@ -29,6 +30,7 @@ Cat::Cat(Cat const &s) : Animal() {
 }
 
 Cat Cat::operator=(Cat const &rhside) {
+    delete this->brainCat;
     this->type = rhside.type;
     this->brainCat = new Brain(*rhside.brainCat);
     std::cout << "Equals operator has been overloaded for cat class!" << std::endl;

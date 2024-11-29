@@ -6,7 +6,7 @@
 /*   By: ryusupov <ryusupov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/28 21:57:17 by rustam            #+#    #+#             */
-/*   Updated: 2024/11/29 12:09:36 by ryusupov         ###   ########.fr       */
+/*   Updated: 2024/11/29 13:35:22 by ryusupov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ Dog::Dog() {
 
 Dog::~Dog() {
     std::cout << "Destructor for dog class has been called!" << std::endl;
+    delete this->brainDog;
 }
 
 Dog::Dog(Dog const &s) : Animal(){
@@ -29,6 +30,7 @@ Dog::Dog(Dog const &s) : Animal(){
 }
 
 Dog &Dog::operator=(Dog const &s) {
+    delete this->brainDog;
     this->type = s.type;
     this->brainDog = new Brain(*s.brainDog);
     std::cout << "Equal operator has been overloaded for dog class!" << std::endl;

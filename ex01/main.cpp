@@ -6,7 +6,7 @@
 /*   By: ryusupov <ryusupov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/28 23:11:00 by rustam            #+#    #+#             */
-/*   Updated: 2024/11/29 13:04:08 by ryusupov         ###   ########.fr       */
+/*   Updated: 2024/11/29 13:40:24 by ryusupov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 #include "Animal.hpp"
 #include "Cat.hpp"
 #include "Dog.hpp"
-
 
 int main()
 {
@@ -70,3 +69,4 @@ int main()
 
 	return 0;
 }
+
